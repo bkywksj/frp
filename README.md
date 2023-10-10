@@ -5,6 +5,7 @@
 [![GitHub](https://img.shields.io/github/stars/bkywksj/frp.svg?style=social&label=Stars)](https://github.com/bkywksj/frp)
 使用docker-compose部署内网全端口映射 支持ssh http https
 
+##视频教程地址：https://www.bilibili.com/video/BV17y4y1N7Zd
 
 ### 仓库目录结构 https://gitee.com/bkywksj/frp.git
 - frp_0.51.3_windows_amd64 windows下的frps（服务端）和frpc（客户端）
