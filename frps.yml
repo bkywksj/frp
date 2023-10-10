@@ -1,0 +1,9 @@
+version: "3"
+services:
+  frps:
+    container_name: frps
+    image: snowdreamtech/frps:0.51.3
+    network_mode: host
+    volumes:
+      - ./frps.ini:/etc/frp/frps.ini
+      - ./log/:/etc/frp/log/
