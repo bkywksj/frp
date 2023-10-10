@@ -1,4 +1,4 @@
-# frp内网穿透全端口映射方案（支持ssh、http、https）
+# docker部署frp实现内网穿透全端口映射方案（支持ssh、http、https）
 
 # 仓库简介
 [![码云Gitee](https://gitee.com/bkywksj/frp/badge/star.svg?theme=blue)](https://gitee.com/bkywksj/frp)
