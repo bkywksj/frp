@@ -44,3 +44,81 @@ $ docker-compose -f frpc.yml up -d frpc
 复制frp_0.51.3_windows_amd64到自己想存放的目录下
 打开frpc.ini进行配置（可以创建快捷方式到桌面）
 启动run.bat（可以创建快捷方式到桌面）
+
+
+
+---------------------------------- docker和docker-compose安装 --------------------------------------------------
+
+
+### docker和docker-compose安装
+安装相关工具类
+
+```bash
+yum install -y yum-utils device-mapper-persistent-data lvm2
+```
+
+配置docker仓库
+
+```bash
+yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+```
+
+aliyun的源
+
+```bash
+yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+
+```
+
+安装docker
+
+```bash
+yum install docker-ce
+```
+启动docker
+
+```bash
+systemctl start docker
+```
+
+设置开机自启
+
+```bash
+chkconfig docker on
+```
+
+## **配置163镜像与存储目录**
+
+```bash
+vim /etc/docker/daemon.json
+```
+
+registry-mirrors 为镜像地址
+docker 版本<20 graph 为存储目录 建议不要使用默认的 否则空间会不够用
+docker 版本>20 graph已经弃用 需使用 data-root
+
+```json
+{
+  "registry-mirrors": ["http://hub-mirror.c.163.com"],
+  "data-root": "/home/docker"
+}
+```
+
+```bash
+systemctl daemon-reload
+systemctl restart docker
+```
+
+
+# docker-compose安装
+
+#### 手动安装
+
+下载地址：https://github.com/docker/compose/releases/
+服务器无法访问GitHub，所以先下载对应的版本到本地，并改名为 docker-compose，然后上传到服务器的/usr/local/bin目录
+
+####  授权
+```bash
+chmod +x /usr/local/bin/docker-compose
+```
+
