@@ -1,5 +1,11 @@
 # frp内网穿透全端口映射方案（支持ssh、http、https）
 
+# 仓库简介
+[![码云Gitee](https://gitee.com/bkywksj/frp/badge/star.svg?theme=blue)](https://gitee.com/bkywksj/frp)
+[![GitHub](https://img.shields.io/github/stars/bkywksj/frp.svg?style=social&label=Stars)](https://github.com/bkywksj/frp)
+使用docker-compose部署内网全端口映射 支持ssh http https
+
+
 ### 仓库目录结构 https://gitee.com/bkywksj/frp.git
 - frp_0.51.3_windows_amd64 windows下的frps（服务端）和frpc（客户端）
 - frpc.ini docker-compose脚本frpc.yml启动客户端的时候调用的配置文件
